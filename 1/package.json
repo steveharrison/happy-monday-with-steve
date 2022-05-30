@@ -1,0 +1,13 @@
+{
+  "name": "temporal-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node example-1.js && node example-2.js && node example-3.js"
+  },
+  "dependencies": {
+    "temporal-polyfill": "0.0.7"
+  }
+}
