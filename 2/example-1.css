@@ -1,0 +1,27 @@
+/* Without CSS Layers */
+
+/*
+a[href^="https://"]::after {
+  content: ' (External)';
+}
+
+.cool-link::after {
+  content: ' (Cool external link)';
+}
+*/
+
+/* With CSS Layers */
+
+@layer base, main;
+
+@layer base {
+  a[href^="https://"]::after {
+    content: ' (External)';
+  }
+}
+
+@layer main {
+  .cool-link::after {
+  	content: ' (Cool external link)';
+  }
+}

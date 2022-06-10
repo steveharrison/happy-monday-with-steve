@@ -1,0 +1,25 @@
+/* From https://css-tricks.com/css-cascade-layers/#quick-example */
+
+/* establish a layer order up-front, from lowest to highest priority */
+@layer reset, defaults, patterns, components, utilities, overrides;
+
+/* import stylesheets into a layer (dot syntax represents nesting) */
+@import url('framework.css') layer(components.framework);
+
+/* add styles to layers */
+@layer utilities {
+  /* high layer priority, despite low specificity */
+  [data-color='brand'] { 
+    color: var(--brand, rebeccapurple);
+  }
+}
+
+@layer defaults {
+  /* higher specificity, but lower layer priority */
+  a:any-link { color: maroon; }
+}
+
+/* un-layered styles have the highest priority */
+a {
+  color: mediumvioletred;
+}
