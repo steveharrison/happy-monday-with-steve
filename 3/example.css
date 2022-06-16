@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Geneva;
+  font-size:  48px;
+}
+
+button {
+  all: unset;
+  box-sizing: border-box;
+  color: #fff;
+  background: blue;
+  border-radius: 4px;
+}
